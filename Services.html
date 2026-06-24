@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>B’s Therapy Lashes | Our Services</title>
+  <meta name="description" content="Explore B’s Therapy lash services including Classic, Hybrid, Volume and Aftercare. Affordable, soft, luxury lashes in Durban." />
+
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="navbar">
+    <a href="./index.html" class="logo">B’s Therapy 🌸</a>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./services.html" class="active">Services</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./Contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="services-hero">
+  <h1>Our Lash Services 💕</h1>
+  <p>Soft. Pretty. Affordable 🐝</p>
+</header>
+
+<!-- FILTER -->
+<section class="filter-section">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="natural">Natural</button>
+  <button class="filter-btn" data-filter="full">Full Sets</button>
+  <button class="filter-btn" data-filter="extras">Extras</button>
+</section>
+
+<!-- SERVICES -->
+<main class="services-main">
+
+  <!-- CLASSIC -->
+  <div class="service-card" data-category="natural">
+    <img src="./Img/classic.jpg">
+    <h2>Classic Set</h2>
+    <p>Soft, natural everyday lashes</p>
+    <p><strong>From R120</strong></p>
+    <button>Book Now</button>
+  </div>
+
+  <!-- HYBRID -->
+  <div class="service-card" data-category="full">
+    <img src="./Img/hybrid.jpg">
+    <h2>Hybrid Set</h2>
+    <p>Fluffy mix of classic & volume</p>
+    <p><strong>From R130</strong></p>
+    <button>Book Now</button>
+  </div>
+
+  <!-- VOLUME -->
+  <div class="service-card" data-category="full">
+    <img src="./Img/volume.jpg">
+    <h2>Volume Set</h2>
+    <p>Bold, dramatic lash look</p>
+    <p><strong>From R150</strong></p>
+    <button>Book Now</button>
+  </div>
+
+  <!-- REFILL -->
+  <div class="service-card" data-category="extras">
+    <img src="./Img/refill.jpg">
+    <h2>Refill</h2>
+    <p>Keep your lashes fresh & full</p>
+    <p><strong>From R100</strong></p>
+    <button>Book Now</button>
+  </div>
+
+  <!-- AFTERCARE -->
+  <div class="service-card" data-category="extras">
+    <img src="./Img/aftercare.jpg">
+    <h2>Aftercare Kit</h2>
+    <p>B’s Therapy aftercare essentials 🌸</p>
+    <p><strong>R50</strong></p>
+    <button>Buy Now</button>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <h2>B’s Therapy 🌸</h2>
+  <p>Allow me to be your lash therapist 🥹❤️</p>
+  <p>Durban | WhatsApp Booking Available</p>
+</footer>
+
+<!-- JS -->
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.service-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.style.display = match ? 'block' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

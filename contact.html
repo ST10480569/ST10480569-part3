@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | B’s Therapy Lashes</title>
+  <meta name="description" content="Book your lash appointment with B’s Therapy. Affordable, soft, luxury lashes in Durban. WhatsApp booking available." />
+
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="navbar">
+    <a href="./index.html" class="logo">B’s Therapy 🌸</a>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="page-header">
+  <h1>Book Your Appointment 💕</h1>
+  <p>Allow me to be your lash therapist 🥹❤️</p>
+</div>
+
+<!-- CONTACT -->
+<div class="container contact-wrapper">
+
+  <!-- INFO -->
+  <div class="contact-info-grid">
+    <div class="contact-detail">
+      <span>📍</span>
+      <p>Durban, KZN</p>
+    </div>
+    <div class="contact-detail">
+      <span>📞</span>
+      <p>+27 67 751 9545</p>
+    </div>
+    <div class="contact-detail">
+      <span>✉️</span>
+      <p>bstherapy5@gmail.com</p>
+    </div>
+    <div class="contact-detail">
+      <span>🕐</span>
+      <p>Mon–Sat: By Appointment</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="contact-form-container">
+
+    <div>
+      <label>First Name *</label>
+      <input type="text" placeholder="Your first name" required />
+    </div>
+
+    <div>
+      <label>Last Name *</label>
+      <input type="text" placeholder="Your last name" required />
+    </div>
+
+    <div>
+      <label>Email *</label>
+      <input type="email" placeholder="Your email" required />
+    </div>
+
+    <div>
+      <label>Message *</label>
+      <textarea placeholder="What style are you booking? (Classic, Hybrid, Volume 💅)" style="height:200px"></textarea>
+    </div>
+
+    <button onclick="bookNow()" class="button submit-btn">
+      Book Appointment ASAP‼️
+    </button>
+
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <h2>B’s Therapy 🌸</h2>
+  <p>Student friendly, relaxing & affordable 🐝</p>
+  <p>Durban | WhatsApp Booking Available</p>
+</footer>
+
+<!-- JS -->
+<script>
+function bookNow() {
+  const phone = "0677519545";
+  const message = "Hi 💕 I’d like to book a lash appointment at B’s Therapy";
+
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
